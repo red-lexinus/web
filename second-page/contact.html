@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>
+            TonRetch
+        </title>
+
+        <meta name="keywords" content="чат-бот, бот, бот-чат, бот, туристический бот, туристы, турист, хакатон, 444">
+        
+
+        <style>
+            @import url("../css/image.css");
+            @import url("../css/style.css");
+            
+            </style>
+         </head>
+         <!--конец начала-->
+
+
+        <body> 
+            <header>
+            
+            <div id="logo" onclick="slowScroll('#top')">
+                <span>TonRetch</span>
+             </div>
+
+             <div id="about">
+                 <a href="../index.html" title="О боте" onclick="slowScroll('#main')">О боте</a>
+                 <a href="/second-page/data.html" title="Дата Выхода" onclick="slowScroll('#data')">Дата Выхода</a>
+                 <a href="/second-page/contact.html" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+                 <a href="/second-page/beta.html" title="Стать Тестировщиком" onclick="slowScroll('#test')">Стать Тестировщиком</a>
+                
+             </div>
+            </header>
+
+            <div id="top">
+                <p>Контакты</p>
+                <h3>tonretch@gmail.com</h3>
+            </div>
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                function slowScroll(id) {
+                    $('body').animate({
+                    scrollTop: $(id).offset().top
+                    }, 500);
+                }
+
+                $(document).on("scroll", function () {
+                if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+                else
+                $("header").attr("class", "fixed");
+                });
+            </script>
+
+
+
+</body>
+
+    
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>
+            TonRetch
+        </title>
+
+        <meta name="keywords" content="чат-бот, бот, бот-чат, бот, туристический бот, туристы, турист, хакатон, 444">
+        
+
+        <style>
+            @import url("css/image.css");
+            @import url("css/style.css");
+            
+            </style>
+         </head>
+         <!--конец начала-->
+
+
+        <body> 
+            <header>
+            
+            <div id="logo" onclick="slowScroll('#top')">
+                <span>TonRetch</span>
+             </div>
+
+             <div id="about">
+                 <a href="index.html" title="О боте" onclick="slowScroll('#main')">О боте</a>
+                 <a href="/second-page/data.html" title="Дата Выхода" onclick="slowScroll('#data')">Дата Выхода</a>
+                 <a href="/second-page/contact.html" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+                 <a href="/second-page/beta.html" title="Стать Тестировщиком" onclick="slowScroll('#test')">Стать Тестировщиком</a>
+                
+             </div>
+            </header>
+
+            <div id="top">
+                <p>TonRetch</p>
+                <h3>туристический бот</h3>
+            </div>
+                
+
+            <div id="main">
+                <div class="intro">
+                    <h1>О чат боте</h1>
+                <span>Доступно как на Android, так и на Ios</span>
+                <div class="text">
+                <span>Вы часто путешествуете по миру, но задаетесь вопросом какие места посетить? <br> Или может быть вы хотите узнать по больше информации о районе в котором вы находитесь? <br> Тогда наш Телеграм бот создан для вас. В нем вас ожидает: <br> - Ближайшие кафе/рестораны <br> - Ближайшие парки и музеи, которые стоит посетить <br> - Информация о погоде в вашем районе <br> - Курс валюты <br> - Магазины и кино по-близости </span>
+                </div>
+
+                </div>
+            </div>
+
+            <div id="overview">
+                <h2>TonRetch</h2>
+                <h4>мы навсегда изменим вашу жизнь</h4>
+
+                <div class="img">
+                  <p> <a href="/second-page/contact.html"> <img src="/images/cots.jpg" alt="Контакты"></a></p> 
+                    <span>Contacts</span>
+                </div>
+
+                <div class="img">
+                    <p> <a href="/second-page/beta.html"> <img src="/images/hots.jpg" alt="Бета Тест"></a></p> 
+                
+                    <span>Beta Test</span>
+                </div>
+
+                
+
+            </div>
+
+           
+             <div id="contacts">
+                 <center><h5>Обратная связь</h5></center><
+                    
+                 <form id="form_input" action='feedback.php' method="post">
+                 <label for ="name">Имя<span>*</span></label><br>
+                  <input required type="text" placeholder="Введите Имя" name="namer" id="name"><br>
+
+                  <label for ="email">Ваша Почта<span>*</span></label><br>
+                  <input required type="email" placeholder="Введите Email" name="email" id="email"><br>
+
+                  <label for ="message">Сообщение<span>*</span></label><br>
+                  <textarea required placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+
+                  
+              <input type="submit"  id="mess_send"  class="btn" Отправить >
+               
+             
+                  
+                  
+
+                 </form>
+             </div>
+
+            </form>
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                function slowScroll(id) {
+                    $('body').animate({
+                    scrollTop: $(id).offset().top
+                    }, 500);
+                }
+
+                $(document).on("scroll", function () {
+                if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+                else
+                $("header").attr("class", "fixed");
+                });
+            </script>
+    </body>
+
+    
+</html>
